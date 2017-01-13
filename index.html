@@ -13,13 +13,13 @@
     <div id="header">
       <img id="mascotImage" src="img/african_guinea_fowl.png"></img>
       <h1 class="headerText">CORE ALGORITHMS</h1>
-      <h4 class="subtitle">Run 15 algorithms, break all 15 and test right inside the browser!</h4>
+      <h4 class="subtitle">Run, break and test 15 algorithms!</h4>
     </div>
 
     <div class="row">
       <div id="navContainer" class="col-md-3">
-        <button class="option" onclick="welcomePage()"><strong>Welcome</strong></button>
-        <button class="option" onclick="makeChangePage()">Make Change</button>
+        <button class="option" onclick="displayWelcomePage()"><strong>Welcome</strong></button>
+        <button class="option" onclick="displayMakeChangePage()">Make Change</button>
         <button class="option" onclick="fizzbuzzPage()">Fizz Buzz</button>
         <button class="option" onclick="palindromePage()">Palindrome</button>
         <button class="option" onclick="factorialPage()">Factorial</button>
@@ -36,7 +36,8 @@
         <button class="option" onclick="connectedGraphPage()">Connected Graph</button>
       </div>
       <div id="contentContainer" class="col-md-9">
-        <div id="welcomeContainer">
+
+        <div id="welcomePage">
           <h1 class="contentHeading">Welcome</h1>
           <div class="content">
             <br>
@@ -53,12 +54,18 @@
             </ul>
           </div>
         </div>
+
+        <div id="makeChangePage">
+          <h1>Hola!</h1>
+        </div>
+
       </div>
     </div>
 
     <div id="subfooter" class="col-md-12">Built with <i class="fa fa-heart" aria-hidden="true"></i> in Oakland</div>
     <div id="footer" class="col-md-12"><a id="githubLink" href="https://github.com/mikeadossi/three-fowl-core-algorithms">Github</a></div>
 
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="scripts/main.js"></script>
   </body>
 </html>

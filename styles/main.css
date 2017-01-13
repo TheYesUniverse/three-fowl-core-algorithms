@@ -31,6 +31,9 @@ body{
   display:block;
   width:100%;
 }
+.option:focus{
+  outline:0;
+}
 .option:hover{
   background-color:lightgrey;
   cursor:pointer;
