@@ -12,8 +12,11 @@ body{
   padding:5px;
 }
 #navContainer{
-  flex-direction: column;
-  width:25%; /* TODO: set responsive min and max width */
+  flex-direction: column; /* TODO: set responsive min and max width */
+  padding: 0;
+}
+.row{
+  margin:0;
 }
 .option{
   background-color:gainsboro;
@@ -27,6 +30,13 @@ body{
   cursor:pointer;
   color:steelblue;
 }
+/* ~~~~~~~~~~~~~~~~~ contentContainer styling below ~~~~~~~~~~~~~~~~~~ */
+#contentContainer{
+  flex-direction: column;
+  background-color:steelblue;
+  padding:10px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .fa-heart{
   color:red;
 }
