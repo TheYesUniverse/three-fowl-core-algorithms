@@ -1,6 +1,4 @@
-/*import { expect } from 'chai'
-import isPalindrome from '../src/isPalindrome'*/
-
+"use strict"
 /*
 function fibonacci (number) {
   if( typeof( number ) !== 'number' ) {
@@ -17,7 +15,6 @@ function fibonacci (number) {
   }
 console.log(fibonacci(20))
 */
-
 function fibonacci ( number ) {
   var fibArray = [0, 1]
   if ( number <= 0 ) return undefined;
