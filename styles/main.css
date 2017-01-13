@@ -33,8 +33,27 @@ body{
 /* ~~~~~~~~~~~~~~~~~ contentContainer styling below ~~~~~~~~~~~~~~~~~~ */
 #contentContainer{
   flex-direction: column;
+  padding:0;
+  font-size:1.5em;
+}
+.contentHeading{
+  color:white;
   background-color:steelblue;
-  padding:10px;
+  height:2em;
+  margin:8px 0 0 13px;
+}
+.content{
+  margin:8px 0 0 13px;
+  padding:21px;
+}
+.addABugBtn{
+  background-color:indianred;
+  color:white;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom:2px solid firebrick;
+  border-radius:5px;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .fa-heart{
