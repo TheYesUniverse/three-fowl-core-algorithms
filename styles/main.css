@@ -13,17 +13,19 @@ body{
 }
 #navContainer{
   flex-direction: column;
-  width:20%;
+  width:25%; /* TODO: set responsive min and max width */
 }
 .option{
-  background-color:lightgrey;
-  height:2em;
+  background-color:gainsboro;
   border-bottom: 0.5px solid black;
   border-right: 1px solid black;
+  padding:7px;
+  text-align:center;
 }
 .option:hover{
-  background-color:gainsboro;
+  background-color:lightgrey;
   cursor:pointer;
+  color:steelblue;
 }
 .fa-heart{
   color:red;
