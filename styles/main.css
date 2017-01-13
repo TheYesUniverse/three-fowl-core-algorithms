@@ -6,7 +6,7 @@ body{
   width:12em;
 }
 #header{
-  background-color: grey;
+  background-color: slategrey;
   color:white;
   text-align:center;
   margin-top:0;
@@ -47,23 +47,79 @@ body{
 }
 .contentHeading{
   color:white;
-  background-color:steelblue;
   height:2em;
   margin:8px 0 0 13px;
+}
+.welcomeContentHeading{
+  background-color:steelblue;
+}
+.algorithmContentHeading{
+  background-color:olivedrab;
 }
 .content{
   margin:8px 0 0 13px;
   padding:21px;
 }
-.addABugFakeBtn{
-  cursor:default;
-  background-color:indianred;
+.buttons{
   color:white;
   border-top: 0;
   border-right: 0;
   border-left: 0;
-  border-bottom:2px solid firebrick;
   border-radius:5px;
+}
+.buttons:focus{
+  outline:0;
+}
+.addABugFakeBtn{
+  cursor:default;
+  background-color:indianred;
+  border-bottom:2px solid firebrick;
+}
+.codeSpace{
+  background-color:whitesmoke;
+  color:black;
+  padding:1em;
+  border-radius: 5px;
+}
+.marginLeft1{
+  margin-left:1em;
+}
+.addABugBtn{
+  cursor:pointer;
+  background-color:indianred;
+  border-bottom:2px solid firebrick;
+}
+.returnBtn{
+  cursor:pointer;
+  background-color:mediumaquamarine;
+  border-bottom:2px solid mediumseagreen;
+}
+.clearBtn{
+  cursor:pointer;
+  background-color:lightgrey;
+  border-bottom:2px solid dimgrey;
+}
+.userInput{
+  border-bottom:3px solid transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width:70px;
+  text-decoration: none;
+  text-align:center;
+}
+.userInput:focus{
+  outline:0;
+}
+.userInput:hover{
+  border-bottom:3px solid skyblue;
+}
+.algoResult{
+  border:0;
+  text-decoration:none;
+}
+.algoResult:focus{
+  outline:0;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .fa-heart{
@@ -76,7 +132,7 @@ body{
   text-align:center;
 }
 #footer{
-  background-color:grey;
+  background-color:slategrey;
   text-align:center;
   padding:5px;
 }

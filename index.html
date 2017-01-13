@@ -20,25 +20,25 @@
       <div id="navContainer" class="col-md-3">
         <button class="option" onclick="displayWelcomePage()"><strong>Welcome</strong></button>
         <button class="option" onclick="displayMakeChangePage()">Make Change</button>
-        <button class="option" onclick="fizzbuzzPage()">Fizz Buzz</button>
-        <button class="option" onclick="palindromePage()">Palindrome</button>
-        <button class="option" onclick="factorialPage()">Factorial</button>
-        <button class="option" onclick="fibonacciPage()">Fibonacci</button>
-        <button class="option" onclick="collatzConjecturePage()">Collatz Conjecture</button>
-        <button class="option" onclick="setUnionPage()">Set Union</button>
-        <button class="option" onclick="setIntersectionPage()">Set Intersection</button>
-        <button class="option" onclick="setComplimentPage()">Set Compliment</button>
-        <button class="option" onclick="setSymmetricDifferencePage()">Set Symmetric Difference</button>
-        <button class="option" onclick="mergeSortPage()">Merge Sort</button>
-        <button class="option" onclick="bubbleSortPage()">Bubble Sort</button>
-        <button class="option" onclick="binarySearchPage()">Binary Search</button>
-        <button class="option" onclick="closestPairPage()">Closest Pair</button>
-        <button class="option" onclick="connectedGraphPage()">Connected Graph</button>
+        <button class="option" onclick="displayFizzBuzzPage()">Fizz Buzz</button>
+        <button class="option" onclick="displayPalindromePage()">Palindrome</button>
+        <button class="option" onclick="displayFactorialPage()">Factorial</button>
+        <button class="option" onclick="displayFibonacciPage()">Fibonacci</button>
+        <button class="option" onclick="displayCollatzConjecturePage()">Collatz Conjecture</button>
+        <button class="option" onclick="displaySetUnionPage()">Set Union</button>
+        <button class="option" onclick="displaySetIntersectionPage()">Set Intersection</button>
+        <button class="option" onclick="displaySetComplimentPage()">Set Compliment</button>
+        <button class="option" onclick="displaySetSymmetricDifferencePage()">Set Symmetric Difference</button>
+        <button class="option" onclick="displayMergeSortPage()">Merge Sort</button>
+        <button class="option" onclick="displayBubbleSortPage()">Bubble Sort</button>
+        <button class="option" onclick="displayBinarySearchPage()">Binary Search</button>
+        <button class="option" onclick="displayClosestPairPage()">Closest Pair</button>
+        <button class="option" onclick="displayConnectedGraphPage()">Connected Graph</button>
       </div>
       <div id="contentContainer" class="col-md-9">
 
         <div id="welcomePage">
-          <h1 class="contentHeading">Welcome</h1>
+          <h1 class="contentHeading welcomeContentHeading">Welcome</h1>
           <div class="content">
             <br>
             <p> Learning about algorithms while getting a handle on unit testing can be fun! This application was built for developers as a way to get familiar with how mocha and chai unit testing works in the browser. </p>
@@ -46,7 +46,7 @@
             <ul>
               <li>Choose from 15 algorithms for a chance to learn a little about each and see how an implementation of said algorithm looks like in javaScript code.</li>
               <br>
-              <li>On each algorithm you'll have the choice to 'add a bug'. <button class="addABugFakeBtn">add a bug!</button> - a feature that simulates what a poorly written version of our code might look like.</li>
+              <li>On each algorithm you'll have the choice to 'add a bug'. <button class="addABugFakeBtn buttons">add a bug!</button> - a feature that simulates what a poorly written version of our code might look like.</li>
               <br>
               <li>Run a Mocha and Chai unit test right in the browser with a click of a button!</li>
               <br>
@@ -56,8 +56,148 @@
         </div>
 
         <div id="makeChangePage">
-          <h1>Hola!</h1>
+          <h1 class="contentHeading algorithmContentHeading">Make Change Algorithm</h1>
+          <div class="content">
+            <div class="descriptionDiv">
+              <h3>Description</h3>
+              <p>Given a price and an amount paid, the makeChange algorithm should return the number of coins in each denomination that should be given as change.</p>
+            </div>
+            <br>
+            <div class="codeDiv">
+              <h3>Code Implementation</h3>
+              <div class="codeSpace">
+                 <p>const makeChange = (price, amountGiven) => {</p>
+                 <p class="marginLeft1">  let amount = amountGiven - price;</p>
+
+                 <p class="marginLeft1">  let normalized = Math.floor( ( amount || 0 ) * 100 )</p>
+
+                <p class="marginLeft1"> let quarters = Math.floor( normalized / 25 )</p>
+                <p class="marginLeft1">normalized -= quarters * 25</p>
+
+                  <p class="marginLeft1"> let dimes = Math.floor( normalized / 10 )</p>
+                  <p class="marginLeft1">normalized -= dimes * 10</p>
+
+                  <p class="narginLeft1"> let nickels = Math.floor( normalized / 5 )</p>
+                  <p class="marginLeft1">normalized -= nickels * 5</p>
+
+                  <p class="marginLeft1"> let pennies = normalized</p>
+            <p>}</p>
+              </div>
+            </div>
+            <br>
+            <div class="runAlgorithm">
+              <h3>Run It</h3>
+              <br>
+              <p>makeChange(<input class="userInput" id="makeChangeInput1"></input>,<input class="userInput" id="makeChangeInput2"></input>);</p>
+              <div>// <input class="algoResult" id="makeChangeResult" readonly="readonly"></input></div>
+              <br>
+              <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons">Return</button> <button class="clearBtn buttons">Clear</button>
+            </div>
+            <br>
+               <!-- input unit test results here! -->
+            <br>
+          </div>
         </div>
+
+        <div id="fizzBuzzPage">
+          <h1 class="contentHeading algorithmContentHeading">FizzBuzz Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="palindromePage">
+          <h1 class="contentHeading algorithmContentHeading">Palindrome Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="factorialPage">
+          <h1 class="contentHeading algorithmContentHeading">Factorial Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="fibonacciPage">
+          <h1 class="contentHeading algorithmContentHeading">Fibonacci Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="collatzConjecturePage">
+          <h1 class="contentHeading algorithmContentHeading">Collatz Conjecture Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="setUnionPage">
+          <h1 class="contentHeading algorithmContentHeading">Set Union Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="setIntersectionPage">
+          <h1 class="contentHeading algorithmContentHeading">Set Intersection Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="setComplimentPage">
+          <h1 class="contentHeading algorithmContentHeading">Set Compliment Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="setSymmetricDifferencePage">
+          <h1 class="contentHeading algorithmContentHeading">Set Symmetric Difference Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="mergeSortPage">
+          <h1 class="contentHeading algorithmContentHeading">Merge Sort Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="bubbleSortPage">
+          <h1 class="contentHeading algorithmContentHeading">Make Change Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="binarySearchPage">
+          <h1 class="contentHeading algorithmContentHeading">Make Change Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="closestPairPage">
+          <h1 class="contentHeading algorithmContentHeading">Make Change Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+        <div id="connectedGraphPage">
+          <h1 class="contentHeading algorithmContentHeading">Make Change Algorithm</h1>
+          <div class="content">
+            <p>content here</p>
+          </div>
+        </div>
+
+
 
       </div>
     </div>

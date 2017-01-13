@@ -31,32 +31,66 @@ $('#welcomePage').css({'display':'block'});
 const displayWelcomePage = () => {
   hideAllPages();
   $('#welcomePage').css({'display':'block'});
-  $(routesObj['makeChange']).css({'display':'none'});
-  console.log("routesObj['welcome']: ", JSON.stringify(routesObj['welcome']))
 }
 
 const displayMakeChangePage = () => {
   hideAllPages();
-  $(routesObj['makeChange']).css({'display':'block'});
-  //$(routesObj['welcome']).css({'display':'none'});
-  console.log('makeChange page clicked')
+  $('#makeChangePage').css({'display':'block'});
 }
 
-const fizzBuzzPage = () => {
-  console.log('fizzbuzz button works')
+const displayFizzBuzzPage = () => {
+  hideAllPages();
+  $('#fizzBuzzPage').css({'display':'block'});
 }
-const palindromePage = () => {
-  console.log('palindrome button works')
+const displayPalindromePage = () => {
+  hideAllPages();
+  $('#palindromePage').css({'display':'block'});
 }
-const factorialPage = () => {}
-const fibonacciPage = () => {}
-const collatzConjecturePage = () => {}
-const setUnionPage = () => {}
-const setIntersectionPage = () => {}
-const setComplimentPage = () => {}
-const setSymmetricDifferencePage = () => {}
-const mergeSortPage = () => {}
-const bubbleSortPage = () => {}
-const binarySearchPage = () => {}
-const closestPairPage = () => {}
-const connectedGraphPage = () => {}
+const displayFactorialPage = () => {
+  hideAllPages();
+  $('#factorialPage').css({'display':'block'});
+}
+const displayFibonacciPage = () => {
+  hideAllPages();
+  $('#fibonacciPage').css({'display':'block'});
+}
+const displayCollatzConjecturePage = () => {
+  hideAllPages();
+  $('#collatzConjecturePage').css({'display':'block'});
+}
+const displaySetUnionPage = () => {
+  hideAllPages();
+  $('#setUnionPage').css({'display':'block'});
+}
+const displaySetIntersectionPage = () => {
+  hideAllPages();
+  $('#setIntersectionPage').css({'display':'block'});
+}
+const displaySetComplimentPage = () => {
+  hideAllPages();
+  $('#setComplimentPage').css({'display':'block'});
+}
+const displaySetSymmetricDifferencePage = () => {
+  hideAllPages();
+  $('#setSymmetricDifferencePage').css({'display':'block'});
+}
+const displayMergeSortPage = () => {
+  hideAllPages();
+  $('#mergeSortPage').css({'display':'block'});
+}
+const displayBubbleSortPage = () => {
+  hideAllPages();
+  $('#bubbleSortPage').css({'display':'block'});
+}
+const displayBinarySearchPage = () => {
+  hideAllPages();
+  $('#binarySearchPage').css({'display':'block'});
+}
+const displayClosestPairPage = () => {
+  hideAllPages();
+  $('#closestPairPage').css({'display':'block'});
+}
+const displayConnectedGraphPage = () => {
+  hideAllPages();
+  $('#connectedGraphPage').css({'display':'block'});
+}
