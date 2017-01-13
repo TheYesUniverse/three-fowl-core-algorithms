@@ -1,5 +1,6 @@
 "use strict"
 
+/* ~~~~~~~~~~~~~~~~~~~~~~ routing functionality below ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const routesObj = {
   1: '#welcomePage',
   2: '#makeChangePage',
@@ -94,3 +95,32 @@ const displayConnectedGraphPage = () => {
   hideAllPages();
   $('#connectedGraphPage').css({'display':'block'});
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ algorithms ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+function makeChange(price, amountGiven) {
+    let amount = amountGiven - price;
+
+    let normalized = Math.floor( ( amount || 0 ) * 100 )
+
+    let quarters = Math.floor( normalized / 25 )
+    normalized -= quarters * 25
+
+    let dimes = Math.floor( normalized / 10 )
+    normalized -= dimes * 10
+
+    let nickels = Math.floor( normalized / 5 )
+    normalized -= nickels * 5
+
+    let pennies = normalized
+
+    return { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
+}
+
+const showInputs = () => {
+  var makeChangeInput1 = $('#makeChangeInput1').val();
+  var makeChangeInput2 = $('#makeChangeInput2').val();
+  console.log('Inputs: ', makeChangeInput1, ' & ', makeChangeInput2)
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
