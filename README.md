@@ -1,7 +1,9 @@
-# three-fowl-core-algorithms
-Learners Guild core algorithms project
+# Three-fowl Core Algorithms
+Learners Guild core algorithms project,
+<br/>
+created by Mike and Pheonix - with algorithm generated teamname: three-fowl
 
-# Core Algorithms
+![alt tag](https://s-media-cache-ak0.pinimg.com/736x/95/00/db/9500db1e1e3722ac29a07368bd1c76a8.jpg)
 
 ## Description
 
