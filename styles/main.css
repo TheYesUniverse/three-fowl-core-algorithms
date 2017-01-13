@@ -6,8 +6,28 @@ body{
   color:white;
   text-align:center;
   margin-top:0;
-  padding:5em 0 2em 0;
+  padding:2em 0 1em 0;
 }
 .subtitle{
   padding:5px;
+}
+#navContainer{
+  flex-direction: column;
+  width:20%;
+}
+.option{
+  background-color:lightgrey;
+  height:2em;
+  border-bottom: 0.5px solid black;
+  border-right: 1px solid black;
+}
+.option:hover{
+  background-color:gainsboro;
+  cursor:pointer;
+}
+footer{
+  background-color:black;
+  color:white;
+  padding:10px;
+  text-align:center;
 }
