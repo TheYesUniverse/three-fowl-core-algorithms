@@ -193,7 +193,7 @@ let resultArray = [];
     const solution = { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
     return solution;
 */
-}
+
 
 const calculateFizzBuzz = () => {
 
