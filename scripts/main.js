@@ -104,7 +104,7 @@ const displayConnectedGraphPage = () => {
   $('#connectedGraphPage').css({'display':'block'});
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~ algorithms ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm makeChange ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 const makeChange = (price, amountGiven) => {
     let amount = amountGiven - price;
@@ -143,10 +143,93 @@ const calculateMakeChange = () => {
 }
 
 const clearMakeChange = () => {
+
   $('#makeChangeInput1').val("");
   $('#makeChangeInput2').val("");
   $('#makeChangeResult').val("");
   solution == " "
+
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm fizzbuzz ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const fizzBuzz = (startingInteger, endingInteger) => {
+
+let resultArray = [];
+
+    for(let i = startingInt; i <= endingInt; i++){
+
+      if( i % 15 == 0 ){
+        resuiltArray += "Fizzbuzz";
+      } else if ( i % 5 == 0 ){
+        resultArray += "Buzz";
+      } else if ( i % 3 == 0 ){
+        resultArray += "Fizz";
+      } else {
+        resultArray += i;
+      }
+    }
+
+    var solution = resultArray;
+    return solution;
+
+  }
+/*
+    let amount = amountGiven - price;
+
+    let normalized = Math.floor( ( amount || 0 ) * 100 )
+
+    let quarters = Math.floor( normalized / 25 )
+    normalized -= quarters * 25
+
+    let dimes = Math.floor( normalized / 10 )
+    normalized -= dimes * 10
+
+    let nickels = Math.floor( normalized / 5 )
+    normalized -= nickels * 5
+
+    let pennies = normalized
+
+    const solution = { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
+    return solution;
+*/
+}
+
+const calculateFizzBuzz = () => {
+
+  const fizzBuzzInput1 = $('#fizzBuzzInput1').val();
+  const fizzBuzzInput2 = $('#fizzBuzzInput2').val();
+  const fizzBuzzResult = $('#fizzBuzzResult').val();
+  const solution = fizzBuzz(fizzBuzzInput1, fizzBuzzInput2);
+
+  if(fizzBuzzInput1 == " " || fizzBuzzInput2 == " "){
+      $('#fizzBuzzResult').val('please enter two arguments');
+      console.log('please enter two arguments')
+  } else if(isNaN(fizzBuzzInput1) || isNaN(fizzBuzzInput2)){
+      $('#fizzBuzzResult').val('please enter numbers');
+  }
+  $('#fizzBuzzResult').val(JSON.stringify(solution));
+}
+
+const clearFizzBuzz = () => {
+
+  $('#fizzBuzzInput1').val("");
+  $('#fizzBuzzInput2').val("");
+  $('#fizzBuzzResult').val("");
+  solution == " "
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm palindrome ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm factorial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm fibonacci ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm collatzConjecture ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setUnion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setIntersection ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setCompliment ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setSymmetricDifference ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm mergeSort ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm bubbleSort ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm binarySearch ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm closestPair ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm connectedGraph ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
