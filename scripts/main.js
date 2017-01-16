@@ -1,5 +1,13 @@
 "use strict"
 
+$('#foldImage').mouseover(() => {
+  $('#spaWarning').css({'display':'block'});
+  console.log('mousein')
+}).mouseleave(() => {
+  $('#spaWarning').css({'display':'none'});
+  console.log('mouseleave')
+})
+
 /* ~~~~~~~~~~~~~~~~~~~~~~ routing functionality below ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 const routesObj = {
   1: '#welcomePage',
@@ -98,7 +106,7 @@ const displayConnectedGraphPage = () => {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ algorithms ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-function makeChange(price, amountGiven) {
+const makeChange = (price, amountGiven) => {
     let amount = amountGiven - price;
 
     let normalized = Math.floor( ( amount || 0 ) * 100 )
@@ -114,13 +122,31 @@ function makeChange(price, amountGiven) {
 
     let pennies = normalized
 
-    return { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
+    const solution = { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
+    return solution;
 }
 
-const showInputs = () => {
-  var makeChangeInput1 = $('#makeChangeInput1').val();
-  var makeChangeInput2 = $('#makeChangeInput2').val();
-  console.log('Inputs: ', makeChangeInput1, ' & ', makeChangeInput2)
+const calculateMakeChange = () => {
+
+  const makeChangeInput1 = $('#makeChangeInput1').val();
+  const makeChangeInput2 = $('#makeChangeInput2').val();
+  const makeChangeResult = $('#makeChangeResult').val();
+  const solution = makeChange(makeChangeInput1, makeChangeInput2);
+
+  if(makeChangeInput1 == " " || makeChangeInput2 == " "){
+      $('#makeChangeResult').val('please enter two arguments');
+      console.log('please enter two arguments')
+  } else if(isNaN(makeChangeInput1) || isNaN(makeChangeInput2)){
+      $('#makeChangeResult').val('please enter numbers');
+  }
+  $('#makeChangeResult').val(JSON.stringify(solution));
+}
+
+const clearMakeChange = () => {
+  $('#makeChangeInput1').val("");
+  $('#makeChangeInput2').val("");
+  $('#makeChangeResult').val("");
+  solution == " "
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
