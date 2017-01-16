@@ -16,7 +16,7 @@ body{
   position:absolute;
 }
 #spaWarning{
-  color:white;
+  color:moccasin;
   float:left;
   position:absolute;
   margin-left:4em;
@@ -40,7 +40,7 @@ body{
 #navContainer{
   flex-direction: column; /* TODO: set responsive min and max width */
   padding: 0;
-  height:100vh;
+  height:100vh; /* TODO: leaving this in breaks the page when window height is reduced, removing it forces the area beneath the footer vacant. Fix. */
 }
 .row{
   margin:0;
