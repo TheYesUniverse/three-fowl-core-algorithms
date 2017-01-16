@@ -131,22 +131,23 @@ const calculateMakeChange = () => {
   const makeChangeInput1 = $('#makeChangeInput1').val();
   const makeChangeInput2 = $('#makeChangeInput2').val();
   const makeChangeResult = $('#makeChangeResult').val();
-  const solution = makeChange(makeChangeInput1, makeChangeInput2);
 
-  if(makeChangeInput1 == " " || makeChangeInput2 == " "){
-      $('#makeChangeResult').val('please enter two arguments');
+  if(makeChangeInput1 === '' || makeChangeInput2 === ''){
+      $('#makeChangeResult').val('please enter two arguments').css({'color':'indianred'});
       console.log('please enter two arguments')
   } else if(isNaN(makeChangeInput1) || isNaN(makeChangeInput2)){
-      $('#makeChangeResult').val('please enter numbers');
+      $('#makeChangeResult').val('please enter numbers').css({'color':'indianred'});
+  } else {
+      const solution = makeChange(makeChangeInput1, makeChangeInput2);
+      $('#makeChangeResult').val(JSON.stringify(solution));
   }
-  $('#makeChangeResult').val(JSON.stringify(solution));
 }
 
 const clearMakeChange = () => {
 
-  $('#makeChangeInput1').val("");
-  $('#makeChangeInput2').val("");
-  $('#makeChangeResult').val("");
+  $('#makeChangeInput1').val('');
+  $('#makeChangeInput2').val('');
+  $('#makeChangeResult').val('');
   solution == " "
 
 }
@@ -157,70 +158,52 @@ const fizzBuzz = (startingInteger, endingInteger) => {
 
 let resultArray = [];
 
-    for(let i = startingInt; i <= endingInt; i++){
+    for(let i = startingInteger; i <= endingInteger; i++){
 
-      if( i % 15 == 0 ){
-        resuiltArray += "Fizzbuzz";
-      } else if ( i % 5 == 0 ){
-        resultArray += "Buzz";
-      } else if ( i % 3 == 0 ){
-        resultArray += "Fizz";
+      if( i % 15 === 0 ){
+        resultArray += " Fizzbuzz ";
+      } else if ( i % 5 === 0 ){
+        resultArray += " Buzz ";
+      } else if ( i % 3 === 0 ){
+        resultArray += " Fizz ";
       } else {
-        resultArray += i;
+        resultArray += ' '+i+' ';
       }
     }
 
-    var solution = resultArray;
+    let solution = resultArray;
     return solution;
 
   }
-/*
-    let amount = amountGiven - price;
-
-    let normalized = Math.floor( ( amount || 0 ) * 100 )
-
-    let quarters = Math.floor( normalized / 25 )
-    normalized -= quarters * 25
-
-    let dimes = Math.floor( normalized / 10 )
-    normalized -= dimes * 10
-
-    let nickels = Math.floor( normalized / 5 )
-    normalized -= nickels * 5
-
-    let pennies = normalized
-
-    const solution = { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
-    return solution;
-*/
-
 
 const calculateFizzBuzz = () => {
 
   const fizzBuzzInput1 = $('#fizzBuzzInput1').val();
   const fizzBuzzInput2 = $('#fizzBuzzInput2').val();
   const fizzBuzzResult = $('#fizzBuzzResult').val();
-  const solution = fizzBuzz(fizzBuzzInput1, fizzBuzzInput2);
 
-  if(fizzBuzzInput1 == " " || fizzBuzzInput2 == " "){
-      $('#fizzBuzzResult').val('please enter two arguments');
-      console.log('please enter two arguments')
-  } else if(isNaN(fizzBuzzInput1) || isNaN(fizzBuzzInput2)){
-      $('#fizzBuzzResult').val('please enter numbers');
+
+  if(fizzBuzzInput1 === '' || fizzBuzzInput2 === ''){
+    $('#fizzBuzzResult').val('please enter two arguments').css({'color':'indianred'});
+  } else if (isNaN(fizzBuzzInput1) || isNaN(fizzBuzzInput2)){
+    $('#fizzBuzzResult').val('please enter numbers').css({'color':'indianred'});
+  } else {
+    const solution = fizzBuzz(fizzBuzzInput1, fizzBuzzInput2);
+    $('#fizzBuzzResult').val(JSON.stringify(solution));
   }
-  $('#fizzBuzzResult').val(JSON.stringify(solution));
 }
 
 const clearFizzBuzz = () => {
 
-  $('#fizzBuzzInput1').val("");
-  $('#fizzBuzzInput2').val("");
-  $('#fizzBuzzResult').val("");
-  solution == " "
+  $('#fizzBuzzInput1').val('');
+  $('#fizzBuzzInput2').val('');
+  $('#fizzBuzzResult').val('');
+  solution == null
 
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm palindrome ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm factorial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm fibonacci ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm collatzConjecture ~~~~~~~~~~~~~~~~~~~~~~~~ */
