@@ -1,8 +1,8 @@
 "use strict"
 
-var fizzbuzz = function(a, b){
+const fizzbuzz = (a, b) => {
 
-  for(var i = a; i <= b; i++){
+  for(let i = a; i <= b; i++){
 
     if( i % 15 == 0 ){
       console.log("Fizzbuzz");
