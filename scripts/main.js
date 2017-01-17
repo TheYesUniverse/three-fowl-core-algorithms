@@ -308,6 +308,44 @@ const clearFactorial = () => {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm fibonacci ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const fibonacci = ( number ) => {
+  const fibArray = [0, 1]
+  if ( number <= 0 ) return undefined;
+  if ( number === 1 ) return fibArray = [0]
+  if ( number === 2 ) return fibArray = [0,1]
+  if ( number >= 3 ) {
+    for ( var i = 2; i < number; i++ ) {
+        fibArray[ i ] = fibArray[ i - 1 ] + fibArray[ i - 2 ]
+    }
+  }
+    return fibArray
+}
+
+const calculateFibonacci = () => {
+
+  const fibonacciInput = $('#fibonacciInput').val();
+
+  if(fibonacciInput === ''){
+    $('#fibonacciResult').val('please enter an argument').css({'color':'indianred'});
+    console.log('please enter arg');
+  } else if (isNaN(fibonacciInput)){
+    $('#fibonacciResult').val('please enter a number').css({'color':'indianred'});
+    console.log('NaN')
+  } else {
+    const solution = fibonacci(fibonacciInput);
+    $('#fibonacciResult').val(solution).css({'color':'black'});
+  }
+}
+
+const clearFibonacci = () => {
+
+  $('#fibonacciInput').val('');
+  $('#fibonacciResult').val('');
+  solution == null
+
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm collatzConjecture ~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setUnion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setIntersection ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
