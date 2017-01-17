@@ -5,6 +5,18 @@ created by Mike and theYesUniverse - with algorithm generated teamname: three-fo
 
 ![alt tag](https://s-media-cache-ak0.pinimg.com/736x/95/00/db/9500db1e1e3722ac29a07368bd1c76a8.jpg)
 
+## Running Code and Tests
+
+To run the app in your browser, clone down the repo and simply start the app.
+```
+$ npm start
+```
+To run unit test cases do the following (in place of star include the name of the test)
+
+```
+$ mocha test/*.js 
+```
+
 ## Description
 
 _Provide a brief, high-level overview of what the final product (artifact) of this goal is. Include any relevant resources or dependencies here._
