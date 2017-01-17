@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/mikeadossi/three-fowl-core-algorithms#readme",
   "dependencies": {
-  "chai": "^3.5.0",
-  "mocha": "^3.2.0"
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-register": "^6.18.0",
+    "chai": "~1.8.0",
+    "mocha": "2.0.1"
 }
 }
