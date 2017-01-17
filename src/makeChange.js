@@ -1,27 +1,5 @@
 'use strict'
 
-//
-// function makeChange(price, amountGiven) {
-//     let amount = amountGiven - price;
-//
-//     let normalized = Math.floor( ( amount || 0 ) * 100 )
-//
-//     let quarters = Math.floor( normalized / 25 )
-//     normalized -= quarters * 25
-//
-//     let dimes = Math.floor( normalized / 10 )
-//     normalized -= dimes * 10
-//
-//     let nickels = Math.floor( normalized / 5 )
-//     normalized -= nickels * 5
-//
-//     let pennies = normalized
-//
-//     return { quarters: quarters, dimes: dimes, nickels: nickels, pennies: pennies }
-//   }
-//
-
-
 
   let quarters = 0;
   let dimes = 0;

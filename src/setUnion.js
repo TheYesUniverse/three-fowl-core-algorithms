@@ -24,4 +24,6 @@ function setUnion(arr1,arr2) {
   return results;
 }
 
-console.log(setUnion([2,3,4,5],[1,2,3,6]))
+console.log(setUnion([2,3,4,5,7],[1,2,3,6]))
+
+module.exports = setUnion;
