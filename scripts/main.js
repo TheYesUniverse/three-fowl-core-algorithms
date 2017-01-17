@@ -401,6 +401,57 @@ const clearCollatzConjecture = () => {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setUnion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+function setUnion(arr1,arr2) {
+
+  let results = []
+  const normalizeLength = Math.max(arr1.length, arr2.length)
+
+  for (let i = 0; i < normalizeLength; i++ ){
+      results.push(arr1[i])
+      results.push(arr2[i])
+      results.sort(function(a, b) {
+        return a - b;
+      });
+    }
+
+    for (let i = 0 ; i < results.length; i++){
+
+      if(results[i] === results[i +1]){
+
+        results.splice(i, 1)
+        i--
+
+      }
+    }
+
+  return results;
+}
+
+const calculateSetUnion = () => {
+
+  const setUnionInput1 = $('#setUnionInput1').val(); // 1, 2, 5
+  const setUnionInput2 = $('#setUnionInput2').val();
+
+  if(setUnionInput1 === '' || setUnionInput2 === ''){
+    $('#setUnionResult').val('please enter an argument').css({'color':'indianred'});
+    console.log('please enter arg');
+  } else if (!(setUnionInput1.isArray) || !(setUnionInput2.isArray)){
+    $('#setUnionResult').val('please enter a number').css({'color':'indianred'});
+  } else {
+    const solution = setUnion(setUnionInput1, setUnionInput2);
+    $('#setUnionResult').val(solution).css({'color':'black'});
+  }
+}
+
+const clearSetUnion = () => {
+
+  $('#setUnionInput1').val('');
+  $('#setUnionInput2').val('');
+  $('#setUnionResult').val('');
+
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setIntersection ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setCompliment ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setSymmetricDifference ~~~~~~~~~~~~~~~~~~~ */
