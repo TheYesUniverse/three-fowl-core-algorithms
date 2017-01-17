@@ -14,3 +14,5 @@ const fibonacci = ( number ) => {
 }
 
 console.log(fibonacci(20))
+
+module.exports = fibonacci;
