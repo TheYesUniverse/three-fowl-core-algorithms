@@ -48,13 +48,11 @@
               <p> Learning about algorithms while getting a handle on unit testing can be fun! This application was built for developers as a way to get familiar with how mocha and chai unit testing works in the browser. </p>
               <br>
               <ul>
-                <li>Choose from 15 algorithms for a chance to learn a little about each and see how an implementation of said algorithm looks like in javaScript code.</li>
+                <li>Choose from 15 algorithms for a chance to learn a little about each and test out the code.</li>
                 <br>
-                <li>On each algorithm you'll have the choice to 'add a bug' - a feature that simulates what a poorly written version of our code might look like.</li>
+                <li>Learn how to run a Mocha and Chai unit test right in the browser.</li>
                 <br>
-                <li>Run a Mocha and Chai unit test right in the browser with a click of a button!</li>
-                <br>
-                <li>Enjoy.</li>
+                <div id='mocha'></div>
               </ul>
             </div>
           </div>
@@ -101,10 +99,9 @@
                 <p>makeChange(<input class="userInput" id="makeChangeInput1"></input>,<input class="userInput" id="makeChangeInput2"></input>);</p>
                 <div>// <input class="algoResult" id="makeChangeResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateMakeChange()">Return</button> <button class="clearBtn buttons" onclick="clearMakeChange()">Clear</button>
+                <button class="returnBtn buttons" onclick="calculateMakeChange()">Return</button> <button class="clearBtn buttons" onclick="clearMakeChange()">Clear</button>
               </div>
               <br>
-              <div id='makeChangeUnit'></div>
                  <!-- input unit test results here! -->
               <br>
             </div>
@@ -152,7 +149,7 @@
                 <p>fizzBuzz(<input class="userInput" id="fizzBuzzInput1"></input>,<input class="userInput" id="fizzBuzzInput2"></input>);</p>
                 <div>// <input class="algoResult" id="fizzBuzzResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateFizzBuzz()">Return</button> <button class="clearBtn buttons" onclick="clearFizzBuzz()">Clear</button>
+                <button class="returnBtn buttons" onclick="calculateFizzBuzz()">Return</button> <button class="clearBtn buttons" onclick="clearFizzBuzz()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -224,7 +221,7 @@
                 <p>isPalindrome(<input class="userInput" id="palindromeInput" style='width:233px'></input>);</p>
                 <div>// <input class="algoResult" id="palindromeResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculatePalindrome()">Return</button> <button class="clearBtn buttons" onclick="clearPalindrome()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculatePalindrome()">Return</button> <button class="clearBtn buttons" onclick="clearPalindrome()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -271,7 +268,7 @@
                 <p>factorial(<input class="userInput" id="factorialInput"></input>);</p>
                 <div>// <input class="algoResult" id="factorialResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateFactorial()">Return</button> <button class="clearBtn buttons" onclick="clearFactorial()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateFactorial()">Return</button> <button class="clearBtn buttons" onclick="clearFactorial()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -317,7 +314,7 @@
                 <p>fibonacci(<input class="userInput" id="fibonacciInput"></input>);</p>
                 <div>// <input class="algoResult" id="fibonacciResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateFibonacci()">Return</button> <button class="clearBtn buttons" onclick="clearFibonacci()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateFibonacci()">Return</button> <button class="clearBtn buttons" onclick="clearFibonacci()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -379,7 +376,7 @@
                 <p>collatzConjecture(<input class="userInput" id="collatzConjectureInput"></input>);</p>
                 <div>// <input class="algoResult" id="collatzConjectureResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateCollatzConjecture()">Return</button> <button class="clearBtn buttons" onclick="clearCollatzConjecture()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateCollatzConjecture()">Return</button> <button class="clearBtn buttons" onclick="clearCollatzConjecture()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -440,7 +437,7 @@
                 <p>setUnion( [<input class="userInput" id="setUnionInput1"></input>],[<input class="userInput" id="setUnionInput2"></input>] );</p>
                 <div>// <input class="algoResult" id="setUnionResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateSetUnion()">Return</button> <button class="clearBtn buttons" onclick="clearSetUnion()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateSetUnion()">Return</button> <button class="clearBtn buttons" onclick="clearSetUnion()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -493,7 +490,7 @@
                 <p>setIntersection(<input class="userInput" id="setIterssectionInput1"></input>,<input class="userInput" id="setIntersectionInput2"></input>);</p>
                 <div>// <input class="algoResult" id="setIntersectionResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateSetIntersection()">Return</button> <button class="clearBtn buttons" onclick="clearSetIntersection()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateSetIntersection()">Return</button> <button class="clearBtn buttons" onclick="clearSetIntersection()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -546,7 +543,7 @@
                 <p>setComplimentPage(<input class="userInput" id="setComplimentInput1"></input>,<input class="userInput" id="setComplimentInput2"></input>);</p>
                 <div>// <input class="algoResult" id="setComplementResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateSetCompliment()">Return</button> <button class="clearBtn buttons" onclick="clearSetCompliment()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateSetCompliment()">Return</button> <button class="clearBtn buttons" onclick="clearSetCompliment()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -599,7 +596,7 @@
                 <p>setSymmetricDifference(<input class="userInput" id="setSymmetricDifferenceInput1"></input>,<input class="userInput" id="setSymmetricDifferenceInput2"></input>);</p>
                 <div>// <input class="algoResult" id="setSymmetricDifferenceResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateSetSymmetricDifference()">Return</button> <button class="clearBtn buttons" onclick="clearSetSymmetricDifference()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateSetSymmetricDifference()">Return</button> <button class="clearBtn buttons" onclick="clearSetSymmetricDifference()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -652,7 +649,7 @@
                 <p>mergeSort(<input class="userInput" id="mergeSortInput1"></input>,<input class="userInput" id="mergeSortInput2"></input>);</p>
                 <div>// <input class="algoResult" id="mergeSortResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateMergeSort()">Return</button> <button class="clearBtn buttons" onclick="clearMergeSort()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateMergeSort()">Return</button> <button class="clearBtn buttons" onclick="clearMergeSort()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -705,7 +702,7 @@
                 <p>bubbleSort(<input class="userInput" id="bubbleSortInput1"></input>,<input class="userInput" id="bubbleSortInput2"></input>);</p>
                 <div>// <input class="algoResult" id="bubbleSortResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateBubbleSort()">Return</button> <button class="clearBtn buttons" onclick="clearBubbleSort()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateBubbleSort()">Return</button> <button class="clearBtn buttons" onclick="clearBubbleSort()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -758,7 +755,7 @@
                 <p>binarySearch(<input class="userInput" id="bnarySearchInput1"></input>,<input class="userInput" id="binarySearchInput2"></input>);</p>
                 <div>// <input class="algoResult" id="binarySearchResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateBinarySearch()">Return</button> <button class="clearBtn buttons" onclick="clearBinarySearch()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateBinarySearch()">Return</button> <button class="clearBtn buttons" onclick="clearBinarySearch()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -811,7 +808,7 @@
                 <p>closestPair(<input class="userInput" id="closestPairInput1"></input>,<input class="userInput" id="closestPairInput2"></input>);</p>
                 <div>// <input class="algoResult" id="closestPairResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateClosestPair()">Return</button> <button class="clearBtn buttons" onclick="clearClosestPair()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateClosestPair()">Return</button> <button class="clearBtn buttons" onclick="clearClosestPair()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -864,7 +861,7 @@
                 <p>connectedGraph(<input class="userInput" id="connectedGraphInput1"></input>,<input class="userInput" id="connectedGraphInput2"></input>);</p>
                 <div>// <input class="algoResult" id="connectedGraphResult" readonly="readonly"></input></div>
                 <br>
-                <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateConnectedGraph()">Return</button> <button class="clearBtn buttons" onclick="clearConnectedGraph()">Clear</button>
+                <!-- --> <button class="returnBtn buttons" onclick="calculateConnectedGraph()">Return</button> <button class="clearBtn buttons" onclick="clearConnectedGraph()">Clear</button>
               </div>
               <br>
                  <!-- input unit test results here! -->
@@ -880,6 +877,19 @@
       <div id="subfooter" class="col-md-12">Built with <i class="fa fa-heart" aria-hidden="true"></i> in Oakland</div>
       <div id="footer" class="col-md-12"><a id="githubLink" href="https://github.com/mikeadossi/three-fowl-core-algorithms">Github</a></div>
   </div>
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="node_modules/chai/chai.js"></script>
+    <script>
+       mocha.ui('bdd'); // 2
+       mocha.reporter('html'); // 3
+       var expect = chai.expect; // 4
+    </script>
+    <script src="test/palindrome.js"></script> <!-- 5 -->
+    <script>
+       mocha.run(); // 6
+    </script>
+    <script src="mocha.js"></script>
+    <script src="chai.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="scripts/main.js"></script>
   </body>
