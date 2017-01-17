@@ -1,11 +1,8 @@
-/*import { expect } from 'chai'
-import isPalindrome from '../src/isPalindrome'*/
-
 "use strict"
 
 const palindrome = (arg) => {
 
-  let submission = arg.replace(/[^\w,]/g, '');
+  let submission = arg.replace(/[^a-zA-Z ]/g, "").replace(/\s+/g, '').trim()
   let submissionArray = submission.split('');
   let loopLength;
   let middleNumIndex
@@ -43,5 +40,6 @@ const palindrome = (arg) => {
 }
 
 
+console.log( 'palindrome? ' + palindrome('a man a plan a canal panama'))
 
-console.log( 'palindrome? ' + palindrome('amoreroma'))
+module.exports = palindrome;
