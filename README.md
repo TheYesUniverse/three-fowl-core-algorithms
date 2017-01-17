@@ -11,6 +11,13 @@ To run the app in your browser, clone down the repo and simply start the app.
 ```
 $ npm start
 ```
+
+To run functions do the following (in place of star include the name of the src file)
+
+```
+$ node *
+```
+
 To run unit test cases do the following (in place of star include the name of the test)
 
 ```
