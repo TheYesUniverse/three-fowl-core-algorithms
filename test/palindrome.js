@@ -1,5 +1,5 @@
-import { expect } from 'chai'
-import isPalindrome from '../src/isPalindrome'
+var should = require('chai').expect(),
+  mergeSort = require('../src/palindrome.js');
 
 describe('isPalindrome', function(){
   context('when given "radar"', function(){
