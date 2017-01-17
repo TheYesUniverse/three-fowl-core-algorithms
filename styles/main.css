@@ -93,10 +93,8 @@ body{
 .buttons:focus{
   outline:0;
 }
-.addABugFakeBtn{
-  cursor:default;
-  background-color:indianred;
-  border-bottom:2px solid firebrick;
+.buttons:hover{
+  opacity:0.8;
 }
 .codeSpace{
   background-color:whitesmoke;
@@ -122,7 +120,7 @@ body{
 }
 .clearBtn{
   cursor:pointer;
-  background-color:lightgrey;
+  background-color:grey;
   border-bottom:2px solid dimgrey;
 }
 .userInput{

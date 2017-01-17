@@ -3,7 +3,7 @@ import isPalindrome from '../src/isPalindrome'*/
 
 "use strict"
 
-const isPalindrome = (arg) => {
+const palindrome = (arg) => {
 
   let submission = arg.replace(/[^\w,]/g, '');
   let submissionArray = submission.split('');
@@ -44,4 +44,4 @@ const isPalindrome = (arg) => {
 
 
 
-console.log( 'palindrome? '+isPalindrome('amoreroma'))
+console.log( 'palindrome? ' + palindrome('amoreroma'))

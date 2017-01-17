@@ -139,7 +139,7 @@ const calculateMakeChange = () => {
       $('#makeChangeResult').val('please enter numbers').css({'color':'indianred'});
   } else {
       const solution = makeChange(makeChangeInput1, makeChangeInput2);
-      $('#makeChangeResult').val(JSON.stringify(solution));
+      $('#makeChangeResult').val(JSON.stringify(solution)).css({'color':'black'});
   }
 }
 
@@ -156,25 +156,26 @@ const clearMakeChange = () => {
 
 const fizzBuzz = (startingInteger, endingInteger) => {
 
-let resultArray = [];
+  let resultArray = [];
 
-    for(let i = startingInteger; i <= endingInteger; i++){
+  for(let i = startingInteger; i <= endingInteger; i++){
 
-      if( i % 15 === 0 ){
-        resultArray += " Fizzbuzz ";
-      } else if ( i % 5 === 0 ){
-        resultArray += " Buzz ";
-      } else if ( i % 3 === 0 ){
-        resultArray += " Fizz ";
-      } else {
-        resultArray += ' '+i+' ';
-      }
+    if( i % 15 === 0 ){
+      resultArray += " Fizzbuzz ";
+    } else if ( i % 5 === 0 ){
+      resultArray += " Buzz ";
+    } else if ( i % 3 === 0 ){
+      resultArray += " Fizz ";
+    } else {
+      resultArray += ' '+i+' ';
     }
 
-    let solution = resultArray;
-    return solution;
-
   }
+
+  let solution = resultArray;
+  return solution;
+
+}
 
 const calculateFizzBuzz = () => {
 
@@ -189,7 +190,7 @@ const calculateFizzBuzz = () => {
     $('#fizzBuzzResult').val('please enter numbers').css({'color':'indianred'});
   } else {
     const solution = fizzBuzz(fizzBuzzInput1, fizzBuzzInput2);
-    $('#fizzBuzzResult').val(JSON.stringify(solution));
+    $('#fizzBuzzResult').val(JSON.stringify(solution)).css({'color':'black'});
   }
 }
 
@@ -203,6 +204,69 @@ const clearFizzBuzz = () => {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm palindrome ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const palindrome = (arg) => {
+
+    let submission = arg.replace(/[^\w,]/g, '').replace(/\d/g,''); // regEx to remove whitespace, special characters and integers.
+    let submissionArray = submission.split('');
+    let loopLength;
+    let middleNumIndex;
+    let w;
+    let e;
+
+    if(submissionArray.length % 2 == 0){
+       loopLength = submissionArray.length / 2
+        w = (submissionArray.length / 2) - 1
+        e = w + 1
+
+    } else {
+
+        middleNumIndex = (submissionArray.length / 2) - 0.5
+        loopLength = (submissionArray.length / 2) - 0.5
+         w = middleNumIndex - 1
+         e = middleNumIndex + 1
+    }
+
+    for(let i = 0; i <= loopLength; i++){
+      if(submissionArray[w] == submissionArray[e]){
+          console.log('your entry: '+arg)
+          console.log(submissionArray[w]+' matches '+submissionArray[e])
+      } else {
+        console.log(submissionArray[w]+' does not match '+submissionArray[e])
+        return false
+      }
+        w -= 1
+        e += 1
+      console.log('true')
+    }
+
+    return true
+
+}
+
+const calculatePalindrome = () => {
+
+  const palindromeInput = $('#palindromeInput').val();
+
+  if(palindromeInput === ''){
+    $('#palindromeResult').val('please enter an argument').css({'color':'indianred'});
+    console.log('please enter arg');
+  } else if (!(isNaN(palindromeInput))){
+    $('#palindromeResult').val('please enter a palindrome word or sentence').css({'color':'indianred'});
+  } else {
+    const solution = palindrome(palindromeInput);
+    $('#palindromeResult').val(solution).css({'color':'black'});
+  }
+}
+
+const clearPalindrome = () => {
+
+  $('#palindromeInput').val('');
+  $('#palindromeResult').val('');
+  solution == null
+
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm factorial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm fibonacci ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

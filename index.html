@@ -50,7 +50,7 @@
               <ul>
                 <li>Choose from 15 algorithms for a chance to learn a little about each and see how an implementation of said algorithm looks like in javaScript code.</li>
                 <br>
-                <li>On each algorithm you'll have the choice to 'add a bug'. <button class="addABugFakeBtn buttons">add a bug!</button> - a feature that simulates what a poorly written version of our code might look like.</li>
+                <li>On each algorithm you'll have the choice to 'add a bug' - a feature that simulates what a poorly written version of our code might look like.</li>
                 <br>
                 <li>Run a Mocha and Chai unit test right in the browser with a click of a button!</li>
                 <br>
@@ -167,25 +167,44 @@
                 <h3>Code Implementation</h3>
               <pre class=" language-js">
                   <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                    const palindrome = (arg) => {
 
-                      for(var i = a; i <= b; i++){
+                      let submission = arg.replace(/[^\w,]/g, '');
+                      let submissionArray = submission.split('');
+                      let loopLength;
+                      let middleNumIndex
+                      let w;
+                      let e;
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
-                        }
+                      if(submissionArray.length % 2 == 0){
+                         loopLength = submissionArray.length / 2
+                          w = (submissionArray.length / 2) - 1
+                          e = w + 1
+
+                      } else {
+
+                          middleNumIndex = (submissionArray.length / 2) - 0.5
+                          loopLength = (submissionArray.length / 2) - 0.5
+                           w = middleNumIndex - 1
+                           e = middleNumIndex + 1
                       }
 
+                      for(let i = 0; i <= loopLength; i++){
+                        if(submissionArray[w] == submissionArray[e]){
+                            console.log('your entry: '+arg)
+                            console.log(submissionArray[w]+' matches '+submissionArray[e])
+                        } else {
+                          console.log(submissionArray[w]+' does not match '+submissionArray[e])
+                          return false
+                        }
+                          w -= 1
+                          e += 1
+                        console.log('true')
+                      }
+
+                      return true
+
                     }
-                  -->
                 </code>
               </pre>
               </div>
@@ -193,7 +212,7 @@
               <div class="runAlgorithm">
                 <h3>Run It</h3>
                 <br>
-                <p>palindrome(<input class="userInput" id="palindromeInput1"></input>,<input class="userInput" id="palindromeInput2"></input>);</p>
+                <p>isPalindrome(<input class="userInput" id="palindromeInput" style='width:233px'></input>);</p>
                 <div>// <input class="algoResult" id="palindromeResult" readonly="readonly"></input></div>
                 <br>
                 <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculatePalindrome()">Return</button> <button class="clearBtn buttons" onclick="clearPalindrome()">Clear</button>
