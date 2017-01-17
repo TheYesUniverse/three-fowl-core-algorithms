@@ -347,6 +347,59 @@ const clearFibonacci = () => {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm collatzConjecture ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const collatzConjecture = (start) => {
+
+  let array = [];
+
+  const doCollatz = (n) => {
+    if( typeof( n ) !== 'number' ) {
+      console.log('InvalidInput')
+    }
+
+    array.push(n);
+
+    if (n === 1){
+      return 1
+    }
+    if(n % 2 != 0) {
+      n = (n * 3) + 1;
+      array.push(n);
+    }
+    if (n % 2 === 0) {
+      n = n/2;
+    }
+    doCollatz(n)
+  }
+
+  doCollatz(start)
+
+  return array
+}
+
+const calculateCollatzConjecture = () => {
+
+  const collatzConjectureInput = $('#collatzConjectureInput').val();
+
+  if(collatzConjectureInput === ''){
+    $('#collatzResult').val('please enter an argument').css({'color':'indianred'});
+    console.log('please enter arg');
+  } else if (isNaN(collatzConjectureInput)){
+    $('#collatzConjectureResult').val('please enter a number').css({'color':'indianred'});
+  } else {
+    const solution = collatzConjecture(collatzConjectureInput);
+    $('#collatzConjectureResult').val(solution).css({'color':'black'});
+  }
+}
+
+const clearCollatzConjecture = () => {
+
+  $('#collatzConjectureInput').val('');
+  $('#collatzConjectureResult').val('');
+  solution == null
+
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setUnion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setIntersection ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setCompliment ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

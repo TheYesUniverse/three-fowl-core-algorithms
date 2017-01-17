@@ -1,4 +1,4 @@
-const collatz = (start) => {
+const collatzConjecture = (start) => {
 
   let array = [];
 

@@ -331,7 +331,7 @@
             <div class="content">
               <div class="descriptionDiv">
                 <h3>Description</h3>
-                <p>Given any two integers fizzbuzz returns an array of the numbers between the given two numbers but returns 'Fizz' for multiples of three, 'Buzz' for multiples of five and'FizzBuzz' for multiples of fifteen. </p>
+                <p>This algorithm proves mathematician Luther Collatz conjecture that starting at any positive number n and taking the very specific trivial seeming steps (if n is even divide it by 2 to get a new value of n, if n is odd multiply it by 3 and add 1 to get a new value or n, and repeat ) it will always reach one.</p>
               </div>
               <br>
               <div class="codeDiv">
@@ -339,25 +339,34 @@
                 <div class="codeSpace">
                   <pre class=" language-js">
                       <code class=" language-js">
-                        <p style='color:red'>In development</p>
-                        <!--
-                        var fizzbuzz = function(a, b){
+                        const collatzConjecture = (start) => {
 
-                          for(var i = a; i <= b; i++){
+                          let array = [];
 
-                            if( i % 15 == 0 ){
-                              console.log("Fizzbuzz");
-                            } else if ( i % 5 == 0 ){
-                              console.log("Buzz");
-                            } else if ( i % 3 == 0 ){
-                              console.log("Fizz");
-                            } else {
-                              console.log(i);
+                          const doCollatz = (n) => {
+                            if( typeof( n ) !== 'number' ) {
+                              throw "InvalidInput"
                             }
+
+                            array.push(n);
+
+                            if (n === 1){
+                              return 1
+                            }
+                            if(n % 2 != 0) {
+                              n = (n * 3) + 1;
+                              array.push(n);
+                            }
+                            if (n % 2 === 0) {
+                              n = n/2;
+                            }
+                            doCollatz(n)
                           }
 
+                          doCollatz(start)
+
+                          return array
                         }
-                      -->
                     </code>
                   </pre>
                </div>
@@ -366,7 +375,7 @@
               <div class="runAlgorithm">
                 <h3>Run It</h3>
                 <br>
-                <p>collatzConjecture(<input class="userInput" id="collatzConjectureInput1"></input>,<input class="userInput" id="collatzConjectureInput2"></input>);</p>
+                <p>collatzConjecture(<input class="userInput" id="collatzConjectureInput"></input>);</p>
                 <div>// <input class="algoResult" id="collatzConjectureResult" readonly="readonly"></input></div>
                 <br>
                 <button class="addABugBtn buttons">add a Bug!</button> <button class="returnBtn buttons" onclick="calculateCollatzConjecture()">Return</button> <button class="clearBtn buttons" onclick="clearCollatzConjecture()">Clear</button>
