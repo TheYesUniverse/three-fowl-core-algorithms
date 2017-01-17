@@ -269,6 +269,44 @@ const clearPalindrome = () => {
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm factorial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const factorial = (arg) => {
+
+       if(arg == 0) {
+           return 1;
+       }
+       if(arg < 0) {
+           return undefined;
+       }
+       for(var i = arg; --i; ) {
+           arg *= i;
+       }
+       return arg;
+}
+
+const calculateFactorial = () => {
+
+  const factorialInput = $('#factorialInput').val();
+
+  if(factorialInput === ''){
+    $('#factorialResult').val('please enter an argument').css({'color':'indianred'});
+    console.log('please enter arg');
+  } else if (isNaN(factorialInput)){
+    $('#factorialResult').val('please enter a number').css({'color':'indianred'});
+  } else {
+    const solution = factorial(factorialInput);
+    $('#factorialResult').val(solution).css({'color':'black'});
+  }
+}
+
+const clearFactorial = () => {
+
+  $('#factorialInput').val('');
+  $('#factorialResult').val('');
+  solution == null
+
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm fibonacci ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm collatzConjecture ~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ algorithm setUnion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

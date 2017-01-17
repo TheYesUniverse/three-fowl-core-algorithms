@@ -72,22 +72,26 @@
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
                 <div class="codeSpace">
-                   <p>const makeChange = (price, amountGiven) => {</p>
-                   <p class="marginLeft1">  let amount = amountGiven - price;</p>
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                       const makeChange = (price, amountGiven) => {
+                         let amount = amountGiven - price;
 
-                   <p class="marginLeft1">  let normalized = Math.floor( ( amount || 0 ) * 100 )</p>
+                         let normalized = Math.floor( ( amount || 0 ) * 100 )
 
-                  <p class="marginLeft1"> let quarters = Math.floor( normalized / 25 )</p>
-                  <p class="marginLeft1">normalized -= quarters * 25</p>
+                       let quarters = Math.floor( normalized / 25 )
+                         normalized -= quarters * 25
 
-                    <p class="marginLeft1"> let dimes = Math.floor( normalized / 10 )</p>
-                    <p class="marginLeft1">normalized -= dimes * 10</p>
+                         let dimes = Math.floor( normalized / 10 )
+                        normalized -= dimes * 10
 
-                    <p class="narginLeft1"> let nickels = Math.floor( normalized / 5 )</p>
-                    <p class="marginLeft1">normalized -= nickels * 5</p>
+                         let nickels = Math.floor( normalized / 5 )
+                        normalized -= nickels * 5
 
-                    <p class="marginLeft1"> let pennies = normalized</p>
-              <p>}</p>
+                         let pennies = normalized
+                      }
+                    </code>
+                  </pre>
                 </div>
               </div>
               <br>
@@ -117,6 +121,7 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
+            <div class="codeSpace">
               <pre class=" language-js">
                   <code class=" language-js">
                     var fizzbuzz = function(a, b){
@@ -137,6 +142,7 @@
                     }
                 </code>
               </pre>
+            </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -160,53 +166,55 @@
             <div class="content">
               <div class="descriptionDiv">
                 <h3>Description</h3>
-                <p>Given any two integers fizzbuzz returns an array of the numbers between the given two numbers but returns 'Fizz' for multiples of three, 'Buzz' for multiples of five and'FizzBuzz' for multiples of fifteen. </p>
+                <p>Given any word the palindrome algorithm returns a boolean value indicating whether the word passed is a palindrome or not. </p>
               </div>
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    const palindrome = (arg) => {
+              <div class="codeSpace">
+                <pre class=" language-js">
+                    <code class=" language-js">
+                      const palindrome = (arg) => {
 
-                      let submission = arg.replace(/[^\w,]/g, '');
-                      let submissionArray = submission.split('');
-                      let loopLength;
-                      let middleNumIndex
-                      let w;
-                      let e;
+                        let submission = arg.replace(/[^\w,]/g, '');
+                        let submissionArray = submission.split('');
+                        let loopLength;
+                        let middleNumIndex
+                        let w;
+                        let e;
 
-                      if(submissionArray.length % 2 == 0){
-                         loopLength = submissionArray.length / 2
-                          w = (submissionArray.length / 2) - 1
-                          e = w + 1
+                        if(submissionArray.length % 2 == 0){
+                           loopLength = submissionArray.length / 2
+                            w = (submissionArray.length / 2) - 1
+                            e = w + 1
 
-                      } else {
-
-                          middleNumIndex = (submissionArray.length / 2) - 0.5
-                          loopLength = (submissionArray.length / 2) - 0.5
-                           w = middleNumIndex - 1
-                           e = middleNumIndex + 1
-                      }
-
-                      for(let i = 0; i <= loopLength; i++){
-                        if(submissionArray[w] == submissionArray[e]){
-                            console.log('your entry: '+arg)
-                            console.log(submissionArray[w]+' matches '+submissionArray[e])
                         } else {
-                          console.log(submissionArray[w]+' does not match '+submissionArray[e])
-                          return false
+
+                            middleNumIndex = (submissionArray.length / 2) - 0.5
+                            loopLength = (submissionArray.length / 2) - 0.5
+                             w = middleNumIndex - 1
+                             e = middleNumIndex + 1
                         }
-                          w -= 1
-                          e += 1
-                        console.log('true')
+
+                        for(let i = 0; i <= loopLength; i++){
+                          if(submissionArray[w] == submissionArray[e]){
+                              console.log('your entry: '+arg)
+                              console.log(submissionArray[w]+' matches '+submissionArray[e])
+                          } else {
+                            console.log(submissionArray[w]+' does not match '+submissionArray[e])
+                            return false
+                          }
+                            w -= 1
+                            e += 1
+                          console.log('true')
+                        }
+
+                        return true
+
                       }
-
-                      return true
-
-                    }
-                </code>
-              </pre>
+                  </code>
+                </pre>
+              </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -230,34 +238,30 @@
             <div class="content">
               <div class="descriptionDiv">
                 <h3>Description</h3>
-                <p>Given any two integers fizzbuzz returns an array of the numbers between the given two numbers but returns 'Fizz' for multiples of three, 'Buzz' for multiples of five and'FizzBuzz' for multiples of fifteen. </p>
+                <p>The factorial algorithm takes a non-negative number and returns the result of a factorial operation on that number. </p>
               </div>
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
+                <div class="codeSpace">
+                  <pre class=" language-js">
                   <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                    const factorial = (arg) => {
 
-                      for(var i = a; i <= b; i++){
-
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
-                        }
-                      }
-
+                           if(arg == 0) {
+                               return 1;
+                           }
+                           if(arg < 0) {
+                               return undefined;
+                           }
+                           for(var i = arg; --i; ) {
+                               arg *= i;
+                           }
+                           return arg;
                     }
-                  -->
                 </code>
-              </pre>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -281,34 +285,29 @@
             <div class="content">
               <div class="descriptionDiv">
                 <h3>Description</h3>
-                <p>Given any two integers fizzbuzz returns an array of the numbers between the given two numbers but returns 'Fizz' for multiples of three, 'Buzz' for multiples of five and'FizzBuzz' for multiples of fifteen. </p>
+                <p>Given a positive number x the fibonacci algorithm returns  special fibonacci numbers, ordered sequentially, in the amount of x.  </p>
               </div>
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
-
-                      for(var i = a; i <= b; i++){
-
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+              <div class="codeSpace">
+                <pre class=" language-js">
+                    <code class=" language-js">
+                      const fibonacci = ( number ) => {
+                        const fibArray = [0, 1]
+                        if ( number <= 0 ) return undefined;
+                        if ( number === 1 ) return fibArray = [0]
+                        if ( number === 2 ) return fibArray = [0,1]
+                        if ( number >= 3 ) {
+                          for ( var i = 2; i < number; i++ ) {
+                              fibArray[ i ] = fibArray[ i - 1 ] + fibArray[ i - 2 ]
+                          }
                         }
+                          return fibArray
                       }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                  </code>
+                </pre>
+              </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -337,29 +336,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+               </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -388,29 +389,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -439,29 +442,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -490,29 +495,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -541,29 +548,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -592,29 +601,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -643,29 +654,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -694,29 +707,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -745,29 +760,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
@@ -796,29 +813,31 @@
               <br>
               <div class="codeDiv">
                 <h3>Code Implementation</h3>
-              <pre class=" language-js">
-                  <code class=" language-js">
-                    <p style='color:red'>In development</p>
-                    <!--
-                    var fizzbuzz = function(a, b){
+                <div class="codeSpace">
+                  <pre class=" language-js">
+                      <code class=" language-js">
+                        <p style='color:red'>In development</p>
+                        <!--
+                        var fizzbuzz = function(a, b){
 
-                      for(var i = a; i <= b; i++){
+                          for(var i = a; i <= b; i++){
 
-                        if( i % 15 == 0 ){
-                          console.log("Fizzbuzz");
-                        } else if ( i % 5 == 0 ){
-                          console.log("Buzz");
-                        } else if ( i % 3 == 0 ){
-                          console.log("Fizz");
-                        } else {
-                          console.log(i);
+                            if( i % 15 == 0 ){
+                              console.log("Fizzbuzz");
+                            } else if ( i % 5 == 0 ){
+                              console.log("Buzz");
+                            } else if ( i % 3 == 0 ){
+                              console.log("Fizz");
+                            } else {
+                              console.log(i);
+                            }
+                          }
+
                         }
-                      }
-
-                    }
-                  -->
-                </code>
-              </pre>
+                      -->
+                    </code>
+                  </pre>
+                </div>
               </div>
               <br>
               <div class="runAlgorithm">
