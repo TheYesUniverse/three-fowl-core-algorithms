@@ -3,6 +3,7 @@
 const palindrome = (arg) => {
 
   let submission = arg.replace(/[^a-zA-Z ]/g, "").replace(/\s+/g, '').trim()
+      submission = submission.toLowerCase();
   let submissionArray = submission.split('');
   let loopLength;
   let middleNumIndex
