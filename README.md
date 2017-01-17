@@ -7,7 +7,7 @@ created by Mike and theYesUniverse - with algorithm generated teamname: three-fo
 
 ## Running Code and Tests
 
-To run the app in your browser, clone down the repo and simply start the app.
+To run the app in your browser, clone down the repo, in the directory run 'npm install' and simply start the app.
 ```
 $ npm start
 ```
