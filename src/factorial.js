@@ -16,3 +16,5 @@ const factorial = (arg) => {
 
 
 console.log('factorial of 5 is: ' + factorial(5))
+
+module.exports = factorial;
